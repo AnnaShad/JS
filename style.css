@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+max-width: 1140px;
+margin: 0 auto;
+
+}
+
+.header{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: white;
+    background-color: grey;
+    margin-bottom: 40px;
+}
+
+.header-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-button{
+    padding: 5px;
+    display: flex;
+    /* position: relative; */
+    
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+
+.goods-item{
+    margin-left: 30px;
+    /* border: 1px solid black; */
+    padding: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.15);
+}
+
+.buy-btn{
+    padding: 5px;
+    margin-top: 8px;
+    background-color: grey;
+    border: 0px;
+    color: white;
+}
+
+.backet{
+    background-color: white;
+    color: black;
+    padding: 7px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.15);
+    z-index: 10;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.cb{
+    position: relative;
+}
+
+/* .bk-1{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+
+} */
+
+.backet-one{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.backet-two{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 50px;
+    
+}
+
+.backet-img{
+    padding-right: 10px;
+}
+
+.each{
+    font-size: 10px;
+}
+
+.bk{
+    padding-bottom: 10px;
+}
