@@ -50,17 +50,24 @@ Vue.component('cart', {
             //         }
             //     })
         },
-        remove(item){
-            this.$parent.getJson(`${API}/addToBasket.json`)
-                .then(data => {
-                    if (data.result === 1) {
-                        if(item.quantity>1){
-                            item.quantity--;
-                        } else {
-                            this.cartItems.splice(this.cartItems.indexOf(item), 1);
+        remove(product) {
+            if (product.quantity > 1) {
+                this.$parent.putJson(`/api/cart/${product.id_product}/${product.product_name}`, { quantity: -1 })
+                    .then(data => {
+                        if (data.result) {
+                            product.quantity--;
                         }
-                    }
-                })
+                    })
+            } else {
+                this.$parent.delJson(`/api/cart/`, product)
+                    .then(data => {
+                        if (data.result) {
+                            this.cartItems.splice(this.cartItems.indexOf(product), 1);
+                        } else {
+                            console.log('error');
+                        }
+                    })
+            }
         },
     },
     template: `<div class="cb">
