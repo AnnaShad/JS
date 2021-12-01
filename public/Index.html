@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>eShop</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div id="app">
+    <header class = "header">
+        <div class="container">
+            <div class="header-top">
+                <div class="icon">eShops</div>
+                <filter-el></filter-el>
+                <!-- <form action="#" class="search-form" @submit.prevent="filter">
+                    <input type="text" class="search-field" v-model="userSearch" >
+                    <button class="btn-search" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form> -->
+                <cart ref="cart"></cart>
+                <!-- <div class="cb"><button class="cart-button" type="button">Корзина</button>
+                <div class="backet">
+                    <div class="backet-one">
+                        <div class="backet-two bk">
+                            <div class="backet-img"><img src="https://picsum.photos/50" alt=""></div>
+                            <div class="backet-four">
+                                <h3 class="name">Мышка</h3>
+                                <p class="quantity">Quantity <span>1</span></p>
+                                <p class="each">2545</p>
+                            </div>
+                        </div>
+                        <div class="backet-three">
+                            <h3 class="backet-price">1565</h3>
+                            <span class="close"></span>
+                        </div>
+                    </div>
+                    <div class="backet-one">
+                        <div class="backet-two">
+                            <div class="backet-img"><img src="https://picsum.photos/50" alt=""></div>
+                            <div class="backet-four">
+                                <h3 class="name">Мышка</h3>
+                                <p class="quantity">Quantity <span>1</span></p>
+                                <p class="each">2545</p>
+                            </div>
+                        </div>
+                        <div class="backet-three">
+                            <h3 class="backet-price">1565</h3>
+                            <span class="close"></span>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <error ref="error"></error>
+        <products ref="products"></products>
+        <!-- <div class="products">
+            <div class="goods-item" v-for="product of products">
+                <img :src="imgCatalog" alt="">
+
+                <h3>{{product.product_name}}</h3>
+                <p>{{product.price}} $</p>
+                <button class="buy-btn" @click="addProduct(product)">Купить</button>
+                </div>
+        </div> -->
+    </main>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/ProductComponent.js"></script>
+<script src="js/CartComponent.js"></script>
+<script src="js/FilterComp.js"></script>
+<script src="js/ErrorComp.js"></script>
+<script src="js/main.js"></script>
+</body>
+        
+</html>
+
+
+<!-- <div class="cb">
+    <button class="cart-button" type="button" @click="showCart = !showCart">Корзина</button>
+    <div class="cart-block" v-show="showCart">
+        <cart-item v-for="item of cartItems" :key="item.id_product" :img="imgCart" :cart-item="item" @remove="remove">
+        </cart-item>
+    </div>
+</div> -->
+
+<!-- <div class="backet">
+    
+        <div class="backet-two bk">
+            <div class="backet-img"><img :src="img" alt="Some img"></div>
+            <div class="backet-four">
+                <div class="name">{{ cartItem.product_name }}</div>
+                <div class="quantity">Quantity: {{ cartItem.quantity }}</div>
+                <div class="each">$ {{ cartItem.price }} each</div>
+            </div>
+            <div class="backet-three">
+                <div class="backet-price">{{cartItem.quantity*cartItem.price}}</div>
+                <button class="close" @click="$emit('remove', cartItem)">&times;</button>
+            </div>
+        </div>
+    
+</div> -->
+
